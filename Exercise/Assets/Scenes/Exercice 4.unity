@@ -134,8 +134,11 @@ GameObject:
   m_Component:
   - component: {fileID: 46894783}
   - component: {fileID: 46894782}
+  - component: {fileID: 46894784}
+  - component: {fileID: 46894786}
+  - component: {fileID: 46894787}
   m_Layer: 0
-  m_Name: FireballContainer
+  m_Name: TriggerFireball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -179,6 +182,55 @@ Transform:
   - {fileID: 1735455760}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &46894784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 46894781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e338e71efe26cae4a952610eef70a5f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemController
+  m_Item: {fileID: 1353232918}
+--- !u!114 &46894786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 46894781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d79c2b93db0968841a3b6ec8d7884f2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ProximityMessageController
+  m_MessageToPlayer: You found a power up ! Press Interact to collect
+--- !u!136 &46894787
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 46894781}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 1.5
+  m_Direction: 1
+  m_Center: {x: 0, y: -0.46, z: 0}
 --- !u!1001 &57473869
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1337,6 +1389,11 @@ Transform:
   - {fileID: 1671845811}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1353232918 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 82c4695cd9e75f041b21cee0279ee6a0, type: 3}
+  m_PrefabInstance: {fileID: 504623080}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1426503517
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1555,6 +1612,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   projectile: {fileID: 8859259631925973261, guid: fc0369a3b08549647b9ac01c683457b7, type: 3}
+  m_ItemController: {fileID: 46894784}
 --- !u!4 &1932753806
 Transform:
   m_ObjectHideFlags: 0
